@@ -234,6 +234,9 @@ class Script(scripts.Script):
                 p.all_prompts.append(p.prompt)
 
                 p.denoising_strength = min(max(p.denoising_strength * denoising_strength_change_factor, 0.1), 1)
+
+                p.width = orig_width
+                p.height = orig_height
             
             all_images += history
 
